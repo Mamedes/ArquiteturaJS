@@ -1,0 +1,13 @@
+{% extends "base.njk" %}
+
+{% block content %}
+  <form class="card" method="POST" action="/book">
+    <div class="card">
+      <section class="avatar" style="background: url(https://source.unsplash.com/collection/228444/300x500)
+     no-repeat center center / cover "></section>
+      <section class="details">
+        <h3>Novo Livro</h3>
+        {% include 'book/fields.njk' %}
+      </section>
+    </form>
+  {% endblock %}>

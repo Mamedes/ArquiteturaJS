@@ -1,0 +1,36 @@
+{% extends "base.njk" %}
+
+{% block content %}
+  <div class="card table-container">
+    <div class="header">
+      <a class="button" href="/book/create">Adicionar Livros</a>
+
+    </div>
+
+    <table width="100%">
+      <thead>
+        <tr>
+          <th>Titulo</th>
+          <th>Autor</th>
+          <th>Editora</th>
+          <th>Area</th>
+          <th>Ação</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        {% for books in book %}
+          <tr>
+            <td>{{book.titulo}}</td>
+            <td>{{book.autor}}</td>
+            <td>{{book.editora}}</td>
+            <td>{{book.area}}</td>
+            <td>
+              <a href="/book/{{book.id}}">ver</a>
+            </td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+{% endblock %}>

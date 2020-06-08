@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+
+    {% block head %}
+      <title>AJS</title>
+    {% endblock %}
+    <link rel="stylesheet" href="/style.css"/>
+  </head>
+
+  <body>
+    <header>
+      <div class="links">
+        <a href="/book">Cadastro de Livros</a>
+
+      </div>
+    </header>
+
+    {% block content %}{% endblock %}
+
+  </body>
+
+</html>

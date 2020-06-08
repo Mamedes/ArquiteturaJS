@@ -1,0 +1,31 @@
+{% extends "base.njk" %}
+
+{% block content %}
+    <div class="card">
+        <section class="avatar" style="background: url({{book.avatar_url}})
+     no-repeat center center / cover "></section>
+        <section class="details">
+            <h3>Detalhes</h3>
+
+            <div class="item">
+                <div>Titulo</div>
+                <div>{{book.titulo}}</div>
+            </div>
+
+            <div class="item">
+                <div>autor</div>
+                <div>{{book.autor}}</div>
+            </div>
+            <div class="item">
+                <div>Editora</div>
+                <div>{{book.editora}}</div>
+            </div>
+            <div class="item">
+                <div>area</div>
+                <div>{{book.area}}</div>
+            </div>
+
+            <a href="/books/{{ book.id }}/edit" class="button">Editar</a>
+        </section>
+    </div>
+{% endblock %}>
